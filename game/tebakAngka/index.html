@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Game Tebak Angka</title>
+ </head>
+ <body>
+  <!-- Javascript -->
+  <script>
+   let ulang = true;
+   while (ulang) {
+    // Menangkap Pilihan Player
+    let p = prompt("Silahkan Masukkan Angka Anda Disini");
+
+    // Menangkap Pilihan Komputer
+    let comp = Math.floor(Math.random() * 11);
+
+    // Mendeklarasikan Hasil
+    let hasil;
+
+    // Menentukan Rules
+    if (p == comp) {
+     hasil = "Seri!!";
+    } else {
+     hasil = p > comp ? (hasil = "Menang!!") : (hasil = "Kalah!!");
+    }
+
+    // Output Hasil
+    alert(
+     `Anda memasukkan angka ${p}\nSedangkan komputer memasukkan angka ${comp}\n\n\n\nMaka hasilnya adalah kamu ${hasil}`
+    );
+
+    ulang = confirm("Apakah kamu ingin bermain game ini lagi??");
+   }
+   alert("Terima Kasih Telah Bermain Game Disini");
+  </script>
+ </body>
+</html>
